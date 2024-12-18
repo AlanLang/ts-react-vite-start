@@ -1,0 +1,38 @@
+{
+  "root": true,
+  "plugins": ["stylelint-order"],
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-prettier/recommended",
+    "stylelint-config-idiomatic-order"
+  ],
+  "rules": {
+    "rule-empty-line-before": "never",
+    "no-empty-source": null,
+    "function-no-unknown": [
+      true,
+      {
+        "ignoreFunctions": ["percentage", "fade"]
+      }
+    ],
+    "selector-pseudo-class-no-unknown": [
+      true,
+      {
+        "ignorePseudoClasses": ["global"]
+      }
+    ],
+    "color-function-notation": null,
+    "number-max-precision": null,
+    "import-notation": null,
+    "declaration-no-important": true,
+    "selector-class-pattern": null,
+    "no-descending-specificity": null,
+    "keyframes-name-pattern": null
+  },
+  "overrides": [
+    {
+      "files": ["**/*.less"],
+      "customSyntax": "postcss-less"
+    }
+  ]
+}
